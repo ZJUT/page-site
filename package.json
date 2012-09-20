@@ -1,0 +1,20 @@
+{
+  "name": "page-site",
+  "version": "0.0.0",
+  "description": "view docs",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "coffee app.coffee"
+  },
+  "repository": "",
+  "keywords": [
+    "docs"
+  ],
+  "author": "jiyinyiyong",
+  "license": "MIT",
+  "dependencies": {
+    "jade": "latest",
+    "marked": "latest",
+    "highlight": "latest"
+  }
+}
