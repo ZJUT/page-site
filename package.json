@@ -15,6 +15,7 @@
   "dependencies": {
     "jade": "latest",
     "marked": "latest",
-    "highlight": "latest"
+    "highlight": "latest",
+    "willow": "latest"
   }
 }
