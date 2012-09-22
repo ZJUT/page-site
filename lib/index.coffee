@@ -1,3 +1,9 @@
 
+fs = require 'fs'
+show = ->
+
 exports.read = (res) ->
-  res.end 'index'
+  fs.readFile 'self/html/index.html', 'utf8', (err, file) ->
+    throw err if err?
+    show file
+    res.end file

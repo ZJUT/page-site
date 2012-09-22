@@ -8,7 +8,7 @@ html
   body
     #box
       #banner
-        span.name Page
+        a.name(href='/page/') Page
         for name in paths
           span.seperate /
           a.name(href="#{name.url}")= name.text
