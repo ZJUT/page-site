@@ -2,11 +2,61 @@
 body
   margin 0px
 
-#side
-  float left
-  width 200px
-  display inline-block
+  #banner
+    box-shadow 0px 1px 0px hsl(0,0,96 )
+    margin-bottom 20px
+    padding 10px 0px
 
-#body
-  float left
-  display inline-block
+    .name, .seperate
+      margin-right 8px
+      color hsl(0,0,90)
+
+    .seperate
+      color hsl(240,80,90)
+
+    a.name
+      color hsl(240,80,80)
+
+  #box
+    height 100%
+    margin 0px auto
+    width 1200px
+
+    #side
+      float left
+      width 240px
+      display inline-block
+      // background red
+      height 100%
+      line-height 30px
+
+      .curr
+        color hsl(0,0,80)
+
+    #body
+      box-shadow -1px 0px hsl(0,0,94)
+      padding-left 40px
+      display inline-block
+      font-size 16px
+      width 900px
+      line-height 30px
+
+      code, pre
+        background hsl(300, 6, 93)
+        font-size 14px
+        border-radius 4px
+
+      p
+        margin 0px
+
+      p>code, &>code
+        padding 2px 6px
+
+      pre
+        padding 2px 8px
+        margin 0px
+        margin-left -8px
+
+a
+  text-decoration none
+  color hsl(240,80,80)

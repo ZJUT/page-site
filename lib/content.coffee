@@ -1,31 +1,21 @@
 
 fs = require 'fs'
 jade = require 'jade'
-show = console.log
+show = ->
 path = require 'path'
+markup = require('./markup').markup
 
 # show __dirname
-layout = {}
+dir = {}
 page = {}
 
-layout.path = '../self/jade/layout.jade'
-layout.path = path.join __dirname, layout.path
-layout.tmpl = fs.readFileSync layout.path, 'utf8'
-layout.html = jade.compile layout.tmpl, pretty: yes
+dir.path = path.join __dirname, '../self/jade/dir.jade'
+dir.tmpl = fs.readFileSync dir.path, 'utf8'
+dir.html = jade.compile dir.tmpl, pretty: yes
 
-page.path = '../self/jade/page.jade'
-page.path = path.join __dirname, page.path
+page.path = path.join __dirname, '../self/jade/page.jade'
 page.tmpl = fs.readFileSync page.path, 'utf8'
-page.html = jade.compile page.tmpl,
-  pretty: yes, filename: './self/jade/layout'
-
-index_files = (files, url) ->
-  dirname = path.dirname url
-  ret = []
-  files.forEach (item) ->
-    link = path.join dirname, item
-    ret.push url: link, text: item
-  ret
+page.html = jade.compile page.tmpl, pretty: yes
 
 index_paths = (url) ->
   files = (url.split path.sep)[1...-1]
@@ -37,6 +27,25 @@ index_paths = (url) ->
     show link
     ret.push url: link, text: item
     i += 1
+  # show ret
+  ret[1..]
+
+index_files = (files, url) ->
+  dirname = path.dirname url
+  ret = []
+  files.forEach (item) ->
+    link = path.join dirname, item
+    # show 'compare:: ', url, item
+    if (path.basename url) is item then ret.push text: item
+    else ret.push url: link, text: item
+  ret
+
+index_children = (url) ->
+  file_path = path.join __dirname, '../', url
+  ret = []
+  children = fs.readdirSync file_path
+  children.forEach (item) ->
+    ret.push url: (path.join url, item), text: item
   show ret
   ret
 
@@ -56,9 +65,12 @@ exports.read = (url, res) ->
       files: index_files files, url
 
     if stat.isDirectory()
-      obj.html = 'this is a derctory'
+      obj.children = index_children url
+      res.writeHead ''
+      res.end (dir.html obj)
     else
-      obj.html = fs.readFileSync file_path, 'utf8'
-
-    res.writeHead ''
-    res.end (html obj)
+      text = fs.readFileSync file_path, 'utf8'
+      # show obj, file_path
+      obj.html = markup text, url
+      res.writeHead ''
+      res.end (page.html obj)
