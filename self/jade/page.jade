@@ -4,7 +4,7 @@ html
     title #{title}
     meta(charset='utf-8')
     link(rel='stylesheet',href='/self/css/global.css')
-    //- script(src='http://192.168.1.117:8072/doodle.js')
+    script(src='http://192.168.1.108:8072/doodle.js')
   body
     #box
       #banner
@@ -20,3 +20,4 @@ html
             else
               a.filename(href='#{item.url}')= item.text
       #body!= html
+    div#copyright © 2002-2012 浙江工业大学 精弘网络

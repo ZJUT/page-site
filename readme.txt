@@ -1,0 +1,15 @@
+
+这里的代码的目的是将文件目录显示成网页, 用作资源收集
+目前打算在 http://pages.zjut.in 测试, 整理更多前端资源
+
+如果要运行该代码:
+  git clone git://gitcafe.com/jiyinyiyong/page-site.git
+  cd page-site
+  npm install
+  sudo npm install -g forever coffee-script
+  forever start -c coffee app.coffee
+  forever stop app.coffee
+会 Git 和 Node 应该能看懂的, coffee 不会的话直接安装不用管也可以
+`forever` 用来监视运行 Node 应用, 需要网上看下
+应用在 Linux 上测试过, 其他平台没有测试... 其实整个就是测试..
+使用代码时注意代码 `jade` 文件里 `#copyright` 和 `app.coffee` 的端口更改
