@@ -72,5 +72,5 @@ exports.read = (url, res) ->
       text = fs.readFileSync file_path, 'utf8'
       # show obj, file_path
       obj.html = markup text, url
-      res.writeHead ''
+      res.writeHead 200, 'content-type': 'text/html'
       res.end (page.html obj)
