@@ -16,7 +16,7 @@ app = http.createServer (req, res) ->
     content.read req.url, res
   else
     show 301
-    res.writeHead 301, Location: 'http://localhost:3000'
+    res.writeHead 301, Location: 'http://pages.zjut.in:3001'
     res.end()
 
-app.listen 3000
+app.listen 3001
