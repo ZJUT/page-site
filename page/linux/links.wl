@@ -8,3 +8,4 @@ OMG! Ubuntu http://www.omgubuntu.co.uk/
 服务器安装 wordpress 记录 http://pages.zjut.in/page/linux/install-wordpress.wl
 
 服务器相关工具 http://pages.zjut.in/page/linux/server-tools.wl
+Clojure 链接 http://pages.zjut.in/page/lisp/clojure.wl
