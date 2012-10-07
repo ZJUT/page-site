@@ -8,3 +8,4 @@ https://groups.google.com/forum/\#!forum/cn-clojure
 http://blog.clojure.cn/
 http://www.slideshare.net/killme2008/clojure-8785955
 http://clojure_api_cn.readthedocs.org/en/latest/index.html#
+http://qiujj.com/static/clojure-handbook.html
