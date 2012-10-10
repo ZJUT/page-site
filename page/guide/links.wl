@@ -1,2 +1,2 @@
 
-服务器学习资源 http://learn.zjut.in/
+xuld 的前端教程 http://s.zjut.in/guide/
