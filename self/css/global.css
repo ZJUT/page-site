@@ -61,6 +61,10 @@ body #box #body pre {
 a {
   text-decoration: none;
   color: #a3a3f5;
+  max-width: 500px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
 }
 #copyright {
   text-align: center;
