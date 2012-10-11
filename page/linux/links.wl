@@ -10,4 +10,5 @@ OMG! Ubuntu http://www.omgubuntu.co.uk/
 服务器相关工具 http://pages.zjut.in/page/linux/server-tools.wl
 Clojure 链接 http://pages.zjut.in/page/lisp/clojure.wl
 
-
+Sublime Text 2 教程视频
+https://tutsplus.com/course/improve-workflow-in-sublime-text-2/
