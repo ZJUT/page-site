@@ -3,7 +3,6 @@
 https://gitcafe.com/jiyinyiyong/page-site
 计划直接用 Git 的权限进行控制.. 没有登录功能
 
-指向自身站点的链接全用 `/page/` 开头, 后面对应 `page/` 文件下路径
 页面左边直接列出目录
 
 标记语言可选 Markdown, `.md .markdown` 后缀将被识别, 目前没有语法高亮, CSS 待增加
