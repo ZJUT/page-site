@@ -12,3 +12,6 @@ Clojure 链接 http://pages.zjut.in/lisp/clojure.wl
 
 Sublime Text 2 教程视频
 https://tutsplus.com/course/improve-workflow-in-sublime-text-2/
+
+鸟哥的 Linux 私房菜 -- 基础学习篇目录
+http://vbird.dic.ksu.edu.tw/linux_basic/linux_basic.php
