@@ -1,18 +1,13 @@
 
 path = require 'path'
-marked = require 'marked'
+ghm = require 'github-flavored-markdown'
 show = ->
 willow = require 'willow'
-
-marked.setOptions {
-  gfm: yes
-  sanitize: yes
-}
 
 exports.markup = (file, url) ->
   extname = path.extname url
   if extname in ['.md', '.markdown']
-    ret = marked file
+    ret = ghm.parse file
     # show ret
     ret
   else if extname in ['.wl', '.willow']

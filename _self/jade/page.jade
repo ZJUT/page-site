@@ -1,23 +1,17 @@
-!!!5
-html
-  head
-    title #{title}
-    meta(charset='utf-8')
-    link(rel='stylesheet',href='/self/css/global.css')
-    //- script(src='http://192.168.1.108:8072/doodle.js')
-  body
-    #box
-      #banner
-        a.name(href='/page/') Page
-        for name in paths
-          span.seperate /
-          a.name(href="#{name.url}")= name.text
-      #side
-        for item in files
-          .file
-            if item.url == undefined
-              a.curr= item.text
-            else
-              a.filename(href='#{item.url}')= item.text
-      #body!= html
-    div#copyright © 2002-2012 浙江工业大学 精弘网络
+
+extends layout
+block body
+  #box
+    #banner
+      a.name(href='/') Page
+      for name in paths
+        span.seperate /
+        a.name(href="#{name.url}")= name.text
+    #side
+      for item in files
+        .file
+          if item.url == undefined
+            a.curr= item.text
+          else
+            a.filename(href='#{item.url}')= item.text
+    #body!= html

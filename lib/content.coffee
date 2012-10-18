@@ -9,17 +9,18 @@ markup = require('./markup').markup
 dir = {}
 page = {}
 
-dir.path = path.join __dirname, '../self/jade/dir.jade'
+dir.path = path.join __dirname, '../_self/jade/dir.jade'
 dir.tmpl = fs.readFileSync dir.path, 'utf8'
-dir.html = jade.compile dir.tmpl, pretty: yes
+dir.html = jade.compile dir.tmpl, pretty: yes, filename: '_self/jade/layout.jade'
 
-page.path = path.join __dirname, '../self/jade/page.jade'
+page.path = path.join __dirname, '../_self/jade/page.jade'
 page.tmpl = fs.readFileSync page.path, 'utf8'
-page.html = jade.compile page.tmpl, pretty: yes
+page.html = jade.compile page.tmpl, pretty: yes, filename: '_self/jade/layout.jade'
 
 index_paths = (url) ->
+  show 'index_paths:', url
   files = (url.split path.sep)[1...-1]
-  # show files
+  show files
   ret = []
   i = 0
   files.forEach (item) ->
@@ -28,7 +29,7 @@ index_paths = (url) ->
     ret.push url: link, text: item
     i += 1
   # show ret
-  ret[1..]
+  ret
 
 index_files = (files, url) ->
   dirname = path.dirname url
@@ -41,7 +42,7 @@ index_files = (files, url) ->
   ret
 
 index_children = (url) ->
-  file_path = path.join __dirname, '../', url
+  file_path = path.join __dirname, '../collections/', url
   ret = []
   children = fs.readdirSync file_path
   children.forEach (item) ->
@@ -50,7 +51,8 @@ index_children = (url) ->
   ret
 
 exports.read = (url, res) ->
-  file_path = path.join __dirname, '../', url
+  file_path = path.join __dirname, '../collections', url
+  show 'read'
   unless fs.existsSync file_path
     res.writeHead 404
     res.end "not found #{file_path}"
@@ -61,7 +63,7 @@ exports.read = (url, res) ->
 
     obj =
       title: path.basename url
-      paths: index_paths url
+      paths: index_paths (path.join url)
       files: index_files files, url
 
     if stat.isDirectory()

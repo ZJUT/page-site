@@ -6,17 +6,15 @@ index = require './lib/index'
 show = ->
 
 app = http.createServer (req, res) ->
-  if req.url is '/'
+  # show 'req', req.url
+  url = decodeURI req.url
+  if url is '/'
     index.read res
-  else if req.url[..5] is '/self/'
+  else if url[..6] is '/_self/'
     source.read req.url, res
-  else if req.url in ['/page', '/page/']
+  else if url is '/'
     index.read res
-  else if req.url[..5] is '/page/'
-    content.read req.url, res
   else
-    show 301
-    res.writeHead 301, Location: 'http://pages.zjut.in:3001'
-    res.end()
+    content.read url, res
 
 app.listen 3001

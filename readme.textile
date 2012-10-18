@@ -13,3 +13,6 @@
 `forever` 用来监视运行 Node 应用, 需要网上看下
 应用在 Linux 上测试过, 其他平台没有测试... 其实整个就是测试..
 使用代码时注意代码 `jade` 文件里 `#copyright` 和 `app.coffee` 的端口更改
+
+use showdown to convert markdown:
+https://github.com/cnodejs/nodeclub/blob/master/public/libs/showdown.js

@@ -1,5 +1,5 @@
 
-入门 http://pages.zjut.in/page/nodejs/start.wl
+入门 http://pages.zjut.in/nodejs/start.wl
 
 资源 http://coffee-js.github.com/node-wiki/page/
 

@@ -14,8 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "jade": "latest",
-    "marked": "latest",
+    "github-flavored-markdown": "latest",
     "highlight": "latest",
-    "willow": "latest"
+    "willow": "latest",
+    "mime": "latest"
   }
 }

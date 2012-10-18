@@ -1,11 +1,15 @@
 
+*
+  box-sizing border-box
+  -moz-box-sizing border-box
+
 body
   margin 0px
 
   #banner
     box-shadow 0px 1px 0px hsl(0,0,96 )
     margin-bottom 20px
-    padding 10px 0px
+    padding 10px 0px 10px 100px
 
     .name, .seperate
       margin-right 8px
@@ -29,15 +33,17 @@ body
       // background red
       height 100%
       line-height 30px
+      text-align right
+      padding-right 20px
 
       .curr
-        color hsl(0,0,80)
+        color black
 
     #body
       box-shadow -1px 0px hsl(0,0,94)
       padding-left 40px
       display inline-block
-      font-size 16px
+      font-size 15px
       width 900px
       line-height 30px
 
@@ -72,3 +78,16 @@ a
   color hsl(0,0,80)
   margin-top 100px
   bottom 0px
+
+#page
+  margin 0px auto
+  padding 40px 10px
+  width 800px
+
+  a
+    text-decoration none
+    color hsl(240,80,80)
+
+  p
+    margin 0px
+    line-height 30px
