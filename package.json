@@ -15,8 +15,6 @@
   "dependencies": {
     "jade": "latest",
     "github-flavored-markdown": "latest",
-    "highlight": "latest",
-    "willow": "latest",
     "mime": "latest"
   }
 }
