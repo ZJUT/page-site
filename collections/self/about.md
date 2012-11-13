@@ -25,3 +25,5 @@ test
 ---------------------------------------
 
 > 45345
+
+关于 Markdown 语法的细节可以看这里 http://wowubuntu.com/markdown/
