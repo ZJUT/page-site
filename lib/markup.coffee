@@ -10,7 +10,4 @@ exports.markup = (file, url) ->
     ret = ghm.parse file
     # show ret
     ret
-  else if extname in ['.wl', '.willow']
-    ret =  willow.willow file
-    ret
   else file
