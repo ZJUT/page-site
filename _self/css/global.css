@@ -19,6 +19,8 @@ body #banner {
   box-shadow: 0px 1px 0px #f5f5f5;
   margin-bottom: 40px;
   padding: 10px 0px 10px 100px;
+}
+body #banner>*:first-child {
   font-size: 46px;
 }
 body #banner .name,

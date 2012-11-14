@@ -9,7 +9,7 @@ exports.read = (url, res) ->
   filepath = path.join __dirname, '../', url
   if fs.existsSync filepath
     file_content = fs.readFileSync filepath, 'utf8'
-    show (mime.lookup url)
+    # show (mime.lookup url)
     res.writeHead 200, 'content-type': (mime.lookup url)
     res.end file_content
   else
