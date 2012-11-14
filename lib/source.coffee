@@ -1,6 +1,6 @@
 
 fs = require 'fs'
-show = ->
+show = console.log
 path = require 'path'
 mime = require 'mime'
 
@@ -9,7 +9,8 @@ exports.read = (url, res) ->
   filepath = path.join __dirname, '../', url
   if fs.existsSync filepath
     file_content = fs.readFileSync filepath, 'utf8'
-    res.writeHead 'content-type', (mime.lookup url)
+    show (mime.lookup url)
+    res.writeHead 200, 'content-type': (mime.lookup url)
     res.end file_content
   else
     res.writeHead 404

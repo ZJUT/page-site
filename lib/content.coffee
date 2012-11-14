@@ -44,7 +44,7 @@ index_files = (files, url) ->
 index_children = (url) ->
   file_path = path.join __dirname, '../collections/', url
   ret = []
-  children = fs.readdirSync file_path
+  children = fs.readdirSync(file_path).sort()
   children.forEach (item) ->
     ret.push url: (path.join url, item), text: item
   show ret
@@ -59,7 +59,7 @@ exports.read = (url, res) ->
   else
     stat = fs.statSync file_path
     # show file_path
-    files = fs.readdirSync (path.dirname file_path)
+    files = fs.readdirSync(path.dirname file_path).sort()
 
     obj =
       title: path.basename url
