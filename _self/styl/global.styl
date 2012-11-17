@@ -2,6 +2,18 @@
 *
   box-sizing border-box
   -moz-box-sizing border-box
+  
+::-webkit-scrollbar
+  width 4px
+  height 4px
+
+::-webkit-scrollbar-track
+  width 4px
+  background hsl(0,90,95)
+
+::-webkit-scrollbar-thumb
+  background hsl(0,50,80)
+  border-radius 2px
 
 @font-face
   font-family "quicksand"
@@ -77,9 +89,9 @@ body
         padding 2px 6px
 
       pre
-        padding 2px 8px
         margin 0px
-        margin-left -8px
+        margin-left 0px
+        padding 2px 8px
 
 a
   text-decoration none
@@ -112,3 +124,6 @@ a
 
 blockquote
   color hsl(0,60,70)
+
+.highlight
+  overflow auto

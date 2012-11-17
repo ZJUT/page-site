@@ -14,14 +14,15 @@ monit 之前配置, 偏重监视.. 配置文件也比较简单
 [forever]: http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever
 [forever-github]: https://github.com/nodejitsu/forever
 
-supervisor 有用 [Sphinx 写的一大篇文档], 想看都英文的
+## 介绍
+
+supervisor 有用 [Sphinx 写的一大篇文档][sphinx], 想看都英文的
 另外有一篇不错的[中文介绍][blog], 我是看这篇博客配的
 [sphinx]: http://supervisord.org/
 [blog]: http://codinn.com/people/brant/notes/110948/
 
-
 配置文件以 `xxx.conf` 保存在 `/etc/supervisor/conf.d` 下
-一个 Node 程序, coffee 命令启动的话, 我是这样配置的
+一个 Node 程序, `coffee` 命令启动的话, 我是这样配置的
 ```
 [program:copyboard]
 command=/usr/local/bin/coffee /home/cyong/s/copyboard/server.coffee
@@ -30,6 +31,8 @@ autorrestart=true
 stdout_logfile=/home/cyong/log/copyboard.log
 ```
 最开始没成功, 遇到错误是 supervisor 修改完脚本要 update ..$^&%
+
+## 部署 Go
 
 Python 的 go.zjut.com 有 redis-server 和 gunicorn 两部分要跑
 redis 不懂, gunicorn 问了是 Makefile 里这一个命令跑的
