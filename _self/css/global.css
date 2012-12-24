@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "quicksand";
+  src: url("http://s.zjut.in/font/no-name6.woff");
+  font-weight: 400px;
+}
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  font-family: "quicksand", "microsoft yahei", "wenquanyi micro hei";
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -13,11 +19,6 @@
 ::-webkit-scrollbar-thumb {
   background: #e6b3b3;
   border-radius: 2px;
-}
-@font-face {
-  font-family: "quicksand";
-  src: url("http://s.zjut.in/font/no-name6.woff");
-  font-weight: 400px;
 }
 body {
   margin: 0px;

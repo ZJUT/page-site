@@ -6,6 +6,7 @@
 http://bonsaijs.org/
 http://paperjs.org/
 http://raphaeljs.com/
+http://fabricjs.com/
 
 ### 3D
 
