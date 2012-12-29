@@ -66,8 +66,9 @@ body #box #side .curr {
   color: #000;
   background: #e6e6e6;
 }
-body #box #side .file a {
+body #box #side a {
   padding: 2px 10px;
+  display: block;
 }
 body #box #body {
   box-shadow: -1px 0px #f0f0f0;

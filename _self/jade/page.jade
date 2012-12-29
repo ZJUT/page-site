@@ -3,15 +3,14 @@ extends layout
 block body
   #box
     #banner
-      a.name(href='/') Page
+      a.name(href='/') Pages
       for name in paths
         span.seperate /
         a.name(href="#{name.url}")= name.text
     #side
       for item in files
-        .file
-          if item.url == undefined
-            a.curr= item.text
-          else
-            a.filename(href='#{item.url}')= item.text
+        if item.url == undefined
+          a.curr= item.text
+        else
+          a.filename(href='#{item.url}')= item.text
     #body!= html
