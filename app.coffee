@@ -8,7 +8,7 @@ app = http.createServer (req, res) ->
   # show 'req', req.url
   url = decodeURI req.url
   if url is '/'
-    res.writeHead 301, location: '/self'
+    res.writeHead 301, location: '/self/about.md'
     res.end()
   else if url[..6] is '/_self/'
     source.read req.url, res
