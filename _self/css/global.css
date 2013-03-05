@@ -131,3 +131,10 @@ blockquote {
 .highlight {
   overflow: auto;
 }
+hr {
+  width: 40%;
+  margin-left: 0px;
+  background-color: #ccc;
+  border-width: 0px;
+  padding: 1px 0px 0px;
+}
