@@ -21,6 +21,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0px;
+  line-height: 34px;
 }
 body #banner {
   box-shadow: 0px 1px 0px #f5f5f5;
@@ -99,6 +100,7 @@ a {
   text-overflow: ellipsis;
   display: inline-block;
   overflow: hidden;
+  height: 34px;
 }
 #copyright {
   text-align: center;
