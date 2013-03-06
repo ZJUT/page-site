@@ -7,5 +7,5 @@
 
 CSS 前端框架整理 [link][css-frameworks]
 
-[css-frameworks]: http://page.zjut.in/css/responsive-frameworks.md
+[css-frameworks]: http://pages.zjut.in/css/responsive-frameworks.md
 
