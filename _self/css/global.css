@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  font-family: "microsoft yahei", "wenquanyi micro hei";
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -17,6 +16,7 @@
 }
 body {
   margin: 0px;
+  font-family: "microsoft yahei", "wenquanyi micro hei";
   overflow-y: scroll;
   font-weight: 600;
   font-size: 18px;
@@ -83,15 +83,15 @@ body #box #body p {
   margin: 24px 0px;
 }
 body #box #body p>code,
-body #box #body>code {
+body #box #body pre>code {
   padding: 2px 6px;
-  font-family: monaco, monospace;
+  font-family: Monaco;
 }
 body #box #body pre {
   margin: 0px;
   margin-left: 0px;
   padding: 2px 8px;
-  font-family: monaco, monospace;
+  font-family: Monaco;
   overflow-x: auto;
 }
 a {
