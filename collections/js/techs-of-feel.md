@@ -27,3 +27,6 @@ http://pages.zjut.in/linux/feel/crtmpserver.md
 用到的模块在 cdn 上有, 现在是 91 上有一些
 http://cdn.zjut.in/bower/components/
 日后会迁移到 94 上的 cdn.zjut.com , 待补充
+
+另外主题定制功能需要本地缓存, 接触到一个, 待定
+https://github.com/d0ugal/locache
