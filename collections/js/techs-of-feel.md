@@ -30,3 +30,29 @@ http://cdn.zjut.in/bower/components/
 
 另外主题定制功能需要本地缓存, 接触到一个, 待定
 https://github.com/d0ugal/locache
+
+### 播放器部分
+
+jwplayer 有免费版本的, 目前不清楚有什么限制
+可以注册, 然后在页面的里能找到自己的 key, 写在 JS 里
+首先需要在 HTML 当中引入一个 `jwplayer.js` 脚本
+
+```jade
+script(src="lib/jwplayer/jwplayer.js")
+```
+
+然后通过 `jwplayer('player')` 来引用, 参数是标签 `id`
+
+```coffee
+init_radio = ->
+  jwplayer.key = "KEY....."
+  share.player = jwplayer("player").setup
+  file: "rtmp://localhost/flvplayback/ts_2_5s65"
+  width: 400
+  height: 40
+  # autostart: true
+```
+注意 `share.player` 是保存的返回对象, 参照 API 文档可以进行控制
+http://www.longtailvideo.com/support/jw-player/28851/javascript-api-reference/
+目前 Feel 的直播需要的播放暂停在播放器上有, 偷懒先沿用
+周四 Feel 要上节目, 下周日要进行直播部分测试, IE 低版本先放弃了
