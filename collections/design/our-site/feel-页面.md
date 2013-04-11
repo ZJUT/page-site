@@ -35,3 +35,6 @@ Logo: http://cdn.zjut.in/pic/feel/feel-logo.png
 
 API 地址
 https://gist.github.com/suziewong/5014181
+
+
+... 本周测试
